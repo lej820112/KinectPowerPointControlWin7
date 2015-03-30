@@ -1,0 +1,40 @@
+﻿<Window x:Class="KinectPowerPointControl.kinect"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Kinect PowerPoint Control" Height="480" Width="640">
+    <Viewbox Stretch="Uniform">
+        <Grid>
+            <Image Name="videoImage"
+                   Width="640"
+                   Height="480"></Image>
+            <Canvas Background="Transparent" IsHitTestVisible="True">
+                <Ellipse Fill="Red"
+                         Height="20"
+                         Width="20"
+                         Name="ellipseLeftHand"
+                         Stroke="White" />
+                <Ellipse Fill="Red"
+                         Height="20"
+                         Width="20"
+                         Name="ellipseRightHand"
+                         Stroke="White" />
+                <Ellipse Fill="Red"
+                         Height="20"
+                         Width="20"
+                         Name="ellipseHead"
+                         Stroke="White" />
+                <Canvas x:Name="StickFigure" Width="640" Height="480" HorizontalAlignment="Center" />
+                <Ellipse Fill="Red"
+                	Height="20"
+                	Width="20"
+                	x:Name="ellipseAnkleLeft"
+                	Stroke="White" Canvas.Left="10" Canvas.Top="450" RenderTransformOrigin="-0.679,1.897" />
+                <Ellipse Fill="Red"
+                	Height="20"
+                	Width="20"
+                	x:Name="ellipseAnkleRight"
+                	Stroke="White" Canvas.Left="10" Canvas.Top="450" RenderTransformOrigin="-0.679,1.897" />
+            </Canvas>
+        </Grid>
+    </Viewbox>
+</Window>
